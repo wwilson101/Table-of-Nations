@@ -1,0 +1,192 @@
+.page-hero {
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  padding: 6rem 1.5rem 4rem;
+}
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(22,40,32,0.9) 0%, rgba(0,0,0,0.4) 100%);
+}
+.page-hero__content { position: relative; z-index: 1; }
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--white-pure);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+.page-hero__title em { color: var(--cream); font-style: italic; }
+
+.join-section {
+  padding: var(--section-pad);
+  background: var(--white);
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.role-card {
+  background: var(--white-pure);
+  border: 1px solid rgba(22,40,32,0.1);
+  border-top: 3px solid var(--orange);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: transform 0.2s;
+}
+.role-card:hover { transform: translateY(-4px); }
+
+.role-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.role-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--forest);
+  margin-bottom: 1rem;
+}
+
+.role-who, .role-how {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.role-who strong, .role-how strong { color: var(--forest); }
+
+/* FORM SECTION */
+.form-section {
+  padding: var(--section-pad);
+  background: var(--cream-light);
+}
+
+.form-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .form-section__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--white-pure);
+  padding: 2.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(22,40,32,0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 560px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--forest);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid rgba(22,40,32,0.2);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--orange);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--orange);
+  flex-shrink: 0;
+}
+
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form-success {
+  background: var(--white-pure);
+  border: 1px solid rgba(22,40,32,0.1);
+  border-top: 3px solid var(--orange);
+  border-radius: 4px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.form-success__icon {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.form-success h3 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--forest);
+  margin-bottom: 0.75rem;
+}
+
+.form-success p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}

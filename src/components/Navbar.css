@@ -1,0 +1,114 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: var(--forest);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white-pure);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.logo-mark {
+  color: var(--orange);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar__links a {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transition: transform 0.2s;
+  transform-origin: left;
+}
+
+.navbar__links a:hover { color: var(--white-pure); }
+.navbar__links a:hover::after { transform: scaleX(1); }
+.navbar__links a.active { color: var(--cream); }
+.navbar__links a.active::after { transform: scaleX(1); }
+
+.navbar__cta {
+  padding: 0.6rem 1.4rem !important;
+  font-size: 0.8rem !important;
+}
+.navbar__cta::after { display: none !important; }
+
+.navbar__toggle {
+  display: none;
+  color: var(--white-pure);
+  padding: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .navbar__toggle { display: flex; }
+
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--forest);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .navbar__links--open { display: flex; }
+
+  .navbar__links a {
+    width: 100%;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 1rem;
+  }
+
+  .navbar__cta {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
