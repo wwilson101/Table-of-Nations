@@ -19,12 +19,12 @@ const TIERS = [
   {
     amount: 150,
     label: 'Sender',
-    impact: 'Supports one week of a missionary's deployment costs.',
+    impact: "Supports one week of a missionary's deployment costs.",
   },
   {
     amount: 500,
     label: 'Nation Builder',
-    impact: 'Fully funds one leader's training cohort participation.',
+    impact: "Fully funds one leader's training cohort participation.",
   },
 ]
 
